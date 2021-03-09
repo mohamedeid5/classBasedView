@@ -7,6 +7,8 @@ class Post(models.Model):
     title = models.CharField(max_length=190)
     content = models.TextField(max_length=1000)
     image = models.ImageField(upload_to='post-img/')
+    active = models.BooleanField(default=True)
+    
     created_at = models.DateTimeField(auto_now_add=True)
     
     
